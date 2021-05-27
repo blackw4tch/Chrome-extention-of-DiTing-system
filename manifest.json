@@ -1,0 +1,52 @@
+{
+  "name": "谛听",
+  "manifest_version": 3,
+  "version": "0.1",
+
+  "description": "谛听—基于NLP的信息真实性标注系统",
+  "icons": {
+    "16": "img/icon16.png",
+    "48": "img/icon48.png",
+    "128": "img/icon128.png" },
+
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action":{
+  "default_icon": {
+  "16": "img/icon16.png",
+  "24": "img/icon24.png",
+  "32": "img/icon32.png"
+},
+    "default_title": "谛听—基于NLP的信息真实性标注系统",
+    "default_popup": "popup.html"
+  },
+
+  "permissions": [
+    "contextMenus",
+    "activeTab",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://www.tsunaley.cn/",
+    "*://*/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*/*"
+      ],
+      "js": [
+        "content_script.js",
+        "js/prepare.js",
+        "js/zhudongtuisong.js",
+        "js/functions.js",
+        "js/huaci.js"
+      ],
+      "css": [
+        "custom.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}

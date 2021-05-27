@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>谛听—基于NLP的信息真实性标注系统</title>
+    <script type="text/javascript" src="popup.js"></script>
+    <style>
+        #popupmain {
+            width:250px;
+            height:300px;
+            font-size:5px;
+        }
+        #rt-pops {
+            background-color: #42cfe2;
+        }
+
+        #rtpop-title
+        {
+            font-weight: bold;
+            font-size:13px;
+
+        }
+        #rtpop-abstract {
+
+        }
+
+        #rtpop-source {
+            font-style: italic;
+
+        }
+
+        #rtpop-result {
+            font: 10px Helvetica, Verdana, sans-serif;
+            color: red;
+        }
+        #a{
+            border-radius:50%;
+            width:10px;
+            height:15px;
+            background-color: #1fcf12;
+        }
+        .rt-red{
+            background-color:#cf1212
+        }
+    </style>
+</head>
+
+<body>
+<div id='popupmain'>
+    <div id="btndiv">
+        <span>主动检测：</span>
+
+        <button id="rt-pops">谛听</button>
+    </div>
+    </br>
+
+    <span>检测结果：</span>
+<button type = 'button' id = 'a'></button>
+    <hr/>
+
+    <span>最近谣言：</span>
+
+    <div id="latelydiv">
+        <div class='rt-divli'>
+            <span id="rtpop-title"></span>
+            </br>
+
+            <span id="rtpop-source"></span>
+            </br>
+            <span id="rtpop-result"></span>
+            <span id="rtpop-abstract"></span>
+        </div>
+        <hr/>
+    </div>
+
+    <div id="jubao">
+        <span id="jubao">举报谣言：</span>
+        <div>
+        <textarea></textarea>
+        </div>
+
+        <div>
+
+        <button>举报</button>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
