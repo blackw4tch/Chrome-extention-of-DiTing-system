@@ -1,1 +1,0 @@
-# DiTing-NLP_based_information_authenticity_labeling_system
